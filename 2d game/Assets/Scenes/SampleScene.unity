@@ -144,15 +144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 682370660994253283, guid: 72fc9cab196c82e4b9c389c802be1b47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.21
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 682370660994253283, guid: 72fc9cab196c82e4b9c389c802be1b47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.73
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 682370660994253283, guid: 72fc9cab196c82e4b9c389c802be1b47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 682370660994253283, guid: 72fc9cab196c82e4b9c389c802be1b47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -212,6 +212,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &505742664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505742662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc9e822f6f7cfd4782e8e9bad8707fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerspeed: 5
+  jump: 2
+  jumpForce: 0.2
+  animator: {fileID: 505742663}
 --- !u!50 &505742666
 Rigidbody2D:
   serializedVersion: 4
@@ -224,7 +240,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -373,7 +389,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.061142817}
+  m_Offset: {x: 0, y: -0.07814288}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -384,7 +400,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8777144}
+  m_Size: {x: 1, y: 0.84371424}
   m_EdgeRadius: 0
 --- !u!212 &656359425
 SpriteRenderer:
@@ -445,8 +461,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656359423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7209, y: -3.89, z: 0}
-  m_LocalScale: {x: 4.5583, y: 1, z: 1}
+  m_LocalPosition: {x: -0.4, y: -4.27, z: 0}
+  m_LocalScale: {x: 18.329576, y: 3.636247, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
