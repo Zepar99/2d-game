@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float playerspeed;
     public float jump;
-    public float jumpForce;
+   
     private Rigidbody2D rd;
     public Animator animator;
     bool Grounded;
@@ -16,14 +16,12 @@ public class PlayerController : MonoBehaviour
       rd = gameObject.GetComponent<Rigidbody2D>();
       SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
     }
-//    private void OnCollisionEnter2D(Collision2D collision)
-//    {
-//        Debug.Log("collision: " + collision.gameObject.name);
-//    }
+
     private void Update()
     {
         float speed = Input.GetAxisRaw("Horizontal");
         float speedv = Input.GetAxisRaw("Jump");
+     
         
         MoveCharater(speed,speedv);
         PlayerMovement(speed,speedv);
@@ -36,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
           if(speedv>0)
           {
-              rd.AddForce(new Vector2(0f,jump),ForceMode2D.Force);
+              rd.AddForce(new Vector2(0f,jump),ForceMode2D.Force+2);
           }
       }
         private void PlayerMovement(float speed,float speedv)
@@ -62,6 +60,16 @@ public class PlayerController : MonoBehaviour
         {
           animator.SetBool("Jump",false);
         }
-    
+
+        if((Input.GetKeyDown(KeyCode.LeftControl)) &&speed ==0)
+        {
+          animator.SetBool("crouch",true);
+        }
+        else
+        {
+          animator.SetBool("crouch",false);
+        }
+        
+     
     }
 }
